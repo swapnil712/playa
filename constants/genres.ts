@@ -1,0 +1,15 @@
+export const genres = [
+  { id: 'soul',      label: 'Soul',      icon: 'mic' },
+  { id: 'pop',       label: 'Pop',       icon: 'star' },
+  { id: 'hiphop',    label: 'Hip-Hop',   icon: 'stats-chart' },
+  { id: 'rock',      label: 'Rock',      icon: 'flash' },
+  { id: 'edm',       label: 'EDM',       icon: 'wine' },
+  { id: 'country',   label: 'Country',   icon: 'trail-sign' },
+  { id: 'latin',     label: 'Latin',     icon: 'sparkles' },
+  { id: 'reggae',    label: 'Reggae',    icon: 'water' },
+  { id: 'jazz',      label: 'Jazz',      icon: 'musical-notes' },
+  { id: 'classical', label: 'Classical', icon: 'musical-note' },
+  { id: 'sufi',      label: 'Sufi',      icon: 'moon' },
+  { id: 'bollywood', label: 'Bollywood', icon: 'film' },
+  { id: 'rap',       label: 'Rap',       icon: 'megaphone' },
+];
