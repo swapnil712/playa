@@ -5,6 +5,7 @@ import { artistsInFocus, hotAndTrending, noteworthyAlbums, playYourMixtape } fro
 import { genres } from "@/constants/genres";
 import { useGlobalStyle } from "@/constants/globals";
 import { ruler } from "@/constants/ruler";
+import { router } from "expo-router";
 import { ScrollView, View } from "react-native";
 
 
@@ -14,7 +15,7 @@ export default function Page () {
     return <ScrollView>
         <ScrollView horizontal={ true }>
             <View style={[ globalStyle.row, { gap: ruler.tiny }] }>
-                { genres.map(( item, index) => <Capsule text={ item.label } size="lg" isActive={ false } key={ index } />)}
+                { genres.map(( item, index) => <Capsule text={ item.label } size="lg" onPress={ () => router.navigate(`/genre/${ item.id }`) } isActive={ false } key={ index } />)}
             </View>
         </ScrollView>
 

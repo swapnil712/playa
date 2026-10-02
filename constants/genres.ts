@@ -1,4 +1,13 @@
-export const genres = [
+import { Ionicons } from "@expo/vector-icons";
+
+type genreType = {
+    id: string,
+    label: string,
+    icon: keyof typeof Ionicons.glyphMap
+}
+
+
+export const genres : genreType[] = [
   { id: 'soul',      label: 'Soul',      icon: 'mic' },
   { id: 'pop',       label: 'Pop',       icon: 'star' },
   { id: 'hiphop',    label: 'Hip-Hop',   icon: 'stats-chart' },

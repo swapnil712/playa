@@ -50,12 +50,12 @@ export function StaticBlock ( { label, icon, subtitle } : BlockProps ) {
 
     const { colors } = useColorTheme()
 
-    return <View style={[ styles.block, spacing["sm"], { backgroundColor: colors.element.resting } ]}>
+    return <View style={[ styles.block, spacing["sm"], { alignItems: subtitle ? "flex-start" : "center", backgroundColor: colors.element.resting } ]}>
         <Ionicons name={icon} size={ ruler.large } color={ colors.text}  style={{ flexShrink: 0 }}  />
 
         <View style={styles.textWrap}>
             <Text style={[ styles.label, { color: colors.text } ]}>{ label }</Text>
-            <Text style={[ styles.subtitle, { color: colors.muted } ]}>{ subtitle }</Text>
+            { subtitle && <Text style={[ styles.subtitle, { color: colors.muted } ]}>{ subtitle }</Text> }
         </View>
     </View>
 }
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     block: {
         gap: ruler.small,
         borderRadius: ruler.tiny,
-        alignItems: "flex-start",
         flexDirection: "row",
     },
     textWrap: {
